@@ -1,11 +1,206 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Scary projetc</title>
-  </head>
-  <body>
-    The Scary projetc
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Scary Project</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* ===================================================================
+     PLACEHOLDER TOKENS — everything below is a stand-in.
+     Swap these once the site's real direction (found-archive / VHS /
+     lullaby, etc.) is picked.
+  =================================================================== */
+  :root{
+    --bg:      #100f13;
+    --bg-2:    #1a181f;
+    --ink:     #e9e6df;
+    --ink-soft:#a9a5ad;
+    --accent:  #6b2fb3;
+    --accent-2:#2f8f6b;
+    --line:    rgba(233,230,223,0.14);
+  }
+
+  *{margin:0; padding:0; box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    line-height:1.65;
+  }
+
+  h1,h2,h3{
+    font-family:'Special Elite', monospace;
+    font-weight:400;
+    letter-spacing:0.01em;
+  }
+
+  a{color:inherit;}
+  ul{list-style:none;}
+  img{display:block; max-width:100%;}
+
+  .wrap{max-width:1000px; margin:0 auto; padding:0 clamp(1.25rem,4vw,3rem);}
+
+  /* ---------------- HEADER ---------------- */
+  .site-header{
+    position:fixed; top:0; left:0; right:0; z-index:900;
+    background:rgba(16,15,19,0.9);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    max-width:1000px; margin:0 auto;
+    padding:1.1rem clamp(1.25rem,4vw,3rem);
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .brand{font-family:'Special Elite', monospace; font-size:1.1rem;}
+  .site-nav{display:flex; gap:1.6rem;}
+  .site-nav a{
+    font-size:0.85rem; text-transform:uppercase; letter-spacing:0.05em;
+    color:var(--ink-soft); transition:color 0.2s ease;
+  }
+  .site-nav a:hover{color:var(--ink);}
+
+  /* ---------------- HERO ---------------- */
+  .hero{
+    padding:clamp(9rem,18vw,12rem) 0 clamp(4rem,8vw,6rem);
+    text-align:center;
+  }
+  .hero .eyebrow{
+    display:block; font-size:0.8rem; letter-spacing:0.1em;
+    color:var(--accent-2); margin-bottom:1.2rem;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem,8vw,4.6rem);
+    line-height:1.05;
+  }
+  .hero p{
+    max-width:520px; margin:1.6rem auto 0;
+    color:var(--ink-soft); font-size:1rem;
+  }
+  .hero-actions{
+    margin-top:2.4rem; display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-block; padding:0.85rem 1.7rem;
+    border:1px solid var(--ink); font-size:0.85rem;
+    letter-spacing:0.04em; transition:background 0.2s ease, color 0.2s ease;
+  }
+  .btn:hover{background:var(--ink); color:var(--bg);}
+
+  /* ---------------- SECTIONS ---------------- */
+  .section{padding:clamp(3.5rem,8vw,6rem) 0; border-top:1px solid var(--line);}
+  .section-alt{background:var(--bg-2);}
+  .section h2{font-size:clamp(1.6rem,3.5vw,2.2rem); margin-bottom:1.2rem;}
+  .section p{max-width:64ch; color:var(--ink-soft);}
+  .section p + p{margin-top:1rem;}
+
+  .card-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:1.4rem; margin-top:2rem;
+  }
+  .card{
+    border:1px solid var(--line); padding:1.6rem;
+    background:var(--bg);
+  }
+  .section-alt .card{background:var(--bg-2);}
+  .card h3{font-size:1.1rem; margin-bottom:0.6rem; color:var(--accent-2);}
+  .card p{color:var(--ink-soft); font-size:0.92rem;}
+
+  /* ---------------- FOOTER ---------------- */
+  footer{
+    padding:3rem 0; border-top:1px solid var(--line);
+    text-align:center; color:var(--ink-soft); font-size:0.85rem;
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <span class="brand">The Scary Project</span>
+    <nav class="site-nav">
+      <a href="#about">About</a>
+      <a href="#listen">Listen</a>
+      <a href="#story">Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">FILE STATUS: UNCONFIRMED</span>
+      <h1>The Scary Project</h1>
+      <p>Placeholder copy — replace with whatever framing the site ends up using once the concept (found archive, lost tape, lullaby) is picked.</p>
+      <div class="hero-actions">
+        <a href="#listen" class="btn">Listen</a>
+        <a href="#story" class="btn">Read the story</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="wrap">
+      <h2>About</h2>
+      <p>Placeholder paragraph. This is where a short framing of the project goes — what it is, who or what is behind it, and why it exists. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <p>A second placeholder paragraph, for when the framing needs more than one beat. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </section>
+
+  <section id="listen" class="section section-alt">
+    <div class="wrap">
+      <h2>Listen</h2>
+      <p>Placeholder for the track list. Each card below stands in for one song.</p>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Track One — Placeholder Title</h3>
+          <p>Short placeholder description of the track. Audio player or link goes here.</p>
+        </div>
+        <div class="card">
+          <h3>Track Two — Coming Soon</h3>
+          <p>Placeholder for a future track. Duis aute irure dolor in reprehenderit.</p>
+        </div>
+        <div class="card">
+          <h3>Track Three — Coming Soon</h3>
+          <p>Placeholder for a future track. Excepteur sint occaecat cupidatat non proident.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" class="section">
+    <div class="wrap">
+      <h2>Story</h2>
+      <p>Placeholder for the lore/backstory. This section can grow into whatever the found-footage or narrative angle ends up being. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+      <p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-alt">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p>Placeholder contact line — email, socials, or a submission form link goes here.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="year"></span> The Scary Project</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
 </html>
